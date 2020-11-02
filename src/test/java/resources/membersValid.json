@@ -1,0 +1,24 @@
+{
+  "members": [
+    {
+      "id": "1",
+      "percentBet": "5"
+    },
+    {
+      "id": "2",
+      "percentBet": "10"
+    },
+    {
+      "id": "3",
+      "percentBet": "15"
+    },
+    {
+      "id": "4",
+      "percentBet": "20"
+    },
+    {
+      "id": "5",
+      "percentBet": "25"
+    }
+  ]
+}
