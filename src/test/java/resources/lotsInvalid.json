@@ -1,0 +1,16 @@
+{
+  "lots": [
+    {
+      "id": "jh1",
+      "startPrice": "100"
+    },
+    {
+      "id": "2",
+      "startPrice": "200"
+    },
+    {
+      "id": "3",
+      "startPrice": "500"
+    }
+  ]
+}
