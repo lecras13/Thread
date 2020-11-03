@@ -43,13 +43,14 @@ public class Member implements Runnable {
                 this.price = price;
                 auction.getWinners().put(auction.getLots().get(j).getId(), this);
                 LOGGER.info( String.format( "Member № %x make a bid to: %d for the lot № %x", this.id,price,(j+1)));
-                LOCK.unlock();
             }
             this.barrier.await();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (BrokenBarrierException e) {
             e.printStackTrace();
+        } finally {
+            LOCK.unlock();
         }
     }
 

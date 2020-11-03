@@ -34,13 +34,16 @@ public class Auction {
     }
 
     public static Auction getInstance(){
-        if (INSTANCE == null) {
-            LOCK.lock();
-            Auction localINSTANCE;
+        try {
             if (INSTANCE == null) {
-                localINSTANCE = new Auction();
-                INSTANCE = localINSTANCE;
+                LOCK.lock();
+                Auction localINSTANCE;
+                if (INSTANCE == null) {
+                    localINSTANCE = new Auction();
+                    INSTANCE = localINSTANCE;
+                }
             }
+        } finally {
             LOCK.unlock();
         }
         return INSTANCE;
